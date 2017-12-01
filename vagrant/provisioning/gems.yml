@@ -1,0 +1,17 @@
+---
+- name: bundler gem
+  gem:
+    name: bundler
+    state: latest
+    user_install: false
+- name: rails gem
+  gem:
+    name: rails
+    state: latest
+    user_install: false
+- name: docsplit gem
+  gem:
+    name: docsplit
+    state: present
+    version: 0.7.6
+    user_install: false

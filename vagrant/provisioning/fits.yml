@@ -1,0 +1,24 @@
+---
+- name: /opt/src exists as staging area for downloads
+  file:
+    path: /opt/src
+    state: directory
+- name: Download FITS
+  get_url:
+    url: https://projects.iq.harvard.edu/files/fits/files/fits-1.2.0.zip
+    dest: /opt/src
+    sha256sum: 9a5f0936d0570d5ca359fef0cb7bdbc0217e62fa05deb6d7b24a5445153f75c8
+- name: /opt/local exists
+  file:
+    path: /opt/local
+    state: directory
+- name: unzip FITS
+  unarchive:
+    src: /opt/src/fits-1.2.0.zip
+    dest: /opt/local
+    remote_src: true
+- name: symlink fits.sh into /usr/local/bin
+  file:
+    src: /opt/src/fits-1.2.0.zip/fits.sh
+    dest: /usr/local/bin/fits.sh
+    state: link

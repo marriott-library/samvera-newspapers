@@ -1,0 +1,69 @@
+---
+- name: System utilities are installed via apt
+  apt: name={{item}} state=present
+  with_items:
+    - acct
+    - apt-rdepends
+    - apticron
+    - cadaver
+    - clamav
+    - colordiff
+    - deborphan
+    - dstat
+    - elinks
+    - htop
+    - iptables-persistent
+    - links
+    - mon
+    - realpath
+    - sysstat
+    - unzip
+- name: Core application daemons installed via apt
+  apt: name={{item}} state=present
+  with_items:
+    - nginx
+    - redis-server
+    - sqlite3
+    - ssh
+- name: Build and language tools installed via apt
+  apt: name={{item}} state=present
+  with_items:
+    - build-essential
+    - git-core
+    - nodejs
+    - nodejs-legacy
+    - npm
+    - python-dev
+    - python-setuptools
+    - python2.7
+    - ruby
+    - ruby-dev
+    - subversion
+- name: Library includes for linking when building
+  apt: name={{item}} state=present
+  with_items:
+    - libbz2-dev
+    - libffi-dev
+    - libjpeg-dev
+    - libreadline-dev
+    - libsqlite3-dev
+    - libssl-dev
+    - libyaml-dev
+    - zlib1g-dev
+- name: Image/media processing, encoding tools via apt
+  apt: name={{item}} state=present
+  with_items:
+    - ffmpeg
+    - fonts-crosextra-caladea
+    - fonts-crosextra-carlito
+    - ghostscript
+    - graphicsmagick
+    - imagemagick
+    - libreoffice-calc
+    - libreoffice-common
+    - libreoffice-impress
+    - libreoffice-writer
+    - openjdk-8-jre-headless
+    - pdftk
+    - poppler-data
+    - poppler-utils

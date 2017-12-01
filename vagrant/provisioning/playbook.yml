@@ -1,0 +1,18 @@
+---
+- hosts: all
+  remote_user: ubuntu
+  become: 'true'
+  gather_facts: False
+  become_method: sudo
+  pre_tasks:
+  - raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+  - setup:
+  tasks:
+  - include_tasks: "{{taskname}}.yml"
+    loop_control: 
+      loop_var: taskname
+    with_items:
+      - packages
+      - gems
+      - npm
+      - fits

@@ -1,0 +1,11 @@
+---
+- name: phantomjs binary via npm
+  npm:
+    name: phantomjs-prebuilt
+    state: latest
+    global: true
+- name: jshint via npm
+  npm:
+    name: jshint
+    state: latest
+    global: true
