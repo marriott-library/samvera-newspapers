@@ -19,6 +19,6 @@
     remote_src: true
 - name: symlink fits.sh into /usr/local/bin
   file:
-    src: /opt/src/fits-1.2.0.zip/fits.sh
+    src: /opt/local/fits-1.2.0/fits.sh
     dest: /usr/local/bin/fits.sh
     state: link
