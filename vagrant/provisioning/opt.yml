@@ -1,0 +1,9 @@
+---
+- name: /opt/src exists as staging area for downloads
+  file:
+    path: /opt/src
+    state: directory
+- name: /opt/local exists
+  file:
+    path: /opt/local
+    state: directory

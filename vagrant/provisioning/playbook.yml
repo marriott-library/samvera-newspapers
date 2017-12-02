@@ -15,4 +15,5 @@
       - packages
       - gems
       - npm
+      - opt
       - fits
