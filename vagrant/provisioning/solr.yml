@@ -1,0 +1,12 @@
+---
+- name: Download solr 6.6.2
+  get_url:
+    url: http://apache.cs.utah.edu/lucene/solr/6.6.2/solr-6.6.2.tgz
+    checksum: sha1:e4a772a7770010f85bfce26a39520584a85d5c3f
+    dest: /opt/src/solr-6.6.2.tgz
+- name: Unpack solr archive
+  unarchive:
+    src: /opt/src/solr-6.6.2.tgz
+    dest: /opt/local
+    remote_src: true
+
