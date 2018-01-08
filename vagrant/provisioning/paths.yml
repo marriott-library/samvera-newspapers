@@ -7,3 +7,10 @@
   file:
     path: /opt/local
     state: directory
+- name: /home/ubuntu/projects exists as mount point for shared_dir
+  file:
+    path: /home/ubuntu/projects
+    owner: ubuntu
+    group: ubuntu
+    state: directory
+    recurse: yes
