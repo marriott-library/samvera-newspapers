@@ -1,7 +1,8 @@
 ---
 - name: Download FITS
   get_url:
-    url: https://projects.iq.harvard.edu/files/fits/files/fits-1.2.0.zip
+    #url: https://projects.iq.harvard.edu/files/fits/files/fits-1.2.0.zip
+    url: https://drive.google.com/uc?export=download&confirm=v505&id=1Ul-9UEDhd0HWhGzB3wmPzEM_o2fYxnl7 
     dest: /opt/src/fits-1.2.0.zip
     checksum: sha256:9a5f0936d0570d5ca359fef0cb7bdbc0217e62fa05deb6d7b24a5445153f75c8
 - name: unzip FITS
