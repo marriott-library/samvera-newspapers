@@ -7,10 +7,10 @@
   file:
     path: /opt/local
     state: directory
-- name: /home/ubuntu/projects exists as mount point for shared_dir
+- name: /home/vagrant/projects exists as mount point for shared_dir
   file:
-    path: /home/ubuntu/projects
-    owner: ubuntu
-    group: ubuntu
+    path: /home/vagrant/projects
+    owner: vagrant
+    group: vagrant
     state: directory
     recurse: yes
