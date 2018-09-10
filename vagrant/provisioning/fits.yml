@@ -1,17 +1,20 @@
 ---
 - name: Download FITS
   get_url:
-    #url: https://projects.iq.harvard.edu/files/fits/files/fits-1.2.0.zip
-    url: https://drive.google.com/uc?export=download&confirm=v505&id=1Ul-9UEDhd0HWhGzB3wmPzEM_o2fYxnl7 
-    dest: /opt/src/fits-1.2.0.zip
-    checksum: sha256:9a5f0936d0570d5ca359fef0cb7bdbc0217e62fa05deb6d7b24a5445153f75c8
+    url: https://brussels.lib.utah.edu/FITS/fits-1.3.0.zip
+    dest: /opt/src/fits-1.3.0.zip
+    checksum: sha256:8dbca703609939e0be36d9678f17447294181731d42fb6dc738a42dc744e788a
+- name: Make FITS dir
+  file:
+    dest: /opt/local/fits-1.3.0
+    state: directory
 - name: unzip FITS
   unarchive:
-    src: /opt/src/fits-1.2.0.zip
-    dest: /opt/local
+    src: /opt/src/fits-1.3.0.zip
+    dest: /opt/local/fits-1.3.0
     remote_src: true
 - name: symlink fits.sh into /usr/local/bin
   file:
-    src: /opt/local/fits-1.2.0/fits.sh
+    src: /opt/local/fits-1.3.0/fits.sh
     dest: /usr/local/bin/fits.sh
     state: link

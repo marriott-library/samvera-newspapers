@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
   # forward TCP 8984 for fcrepo, only via local host interface:
   config.vm.network :forwarded_port, host_ip: "127.0.0.1", guest: 8984, host:8984
 
-  # Sync ./projects on host for access in guest at /home/ubuntu/projects
-  config.vm.synced_folder "./projects", "/home/ubuntu/projects"
+  # Sync ./projects on host for access in guest at /home/vagrant/projects
+  config.vm.synced_folder "./projects", "/home/vagrant/projects"
 
 end

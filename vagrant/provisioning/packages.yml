@@ -69,3 +69,5 @@
     - pdftk
     - poppler-data
     - poppler-utils
+    - tesseract-ocr
+    - openjpeg-tools
