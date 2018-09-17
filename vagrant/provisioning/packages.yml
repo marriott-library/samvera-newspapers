@@ -70,4 +70,4 @@
     - poppler-data
     - poppler-utils
     - tesseract-ocr
-    - openjpeg-tools
+    - libopenjp2-tools
